@@ -18,5 +18,11 @@ public class ArrayListGuia9 {
         
         
         ArrayList<Perro> prueba = new ArrayList<>();
+        
+        Perro dog1 = new Perro("corky");
+        
+        prueba.add(dog1);
+        
+        System.out.println(prueba.get(0));
     }
 }
