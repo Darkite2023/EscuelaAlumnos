@@ -24,6 +24,6 @@ public class ArrayListGuia9 {
         prueba.add(dog1);
         
         System.out.println(prueba.get(0));
-        polako
+       
     }
 }
