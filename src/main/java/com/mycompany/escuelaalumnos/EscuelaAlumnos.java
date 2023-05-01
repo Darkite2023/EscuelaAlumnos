@@ -30,6 +30,10 @@ public class EscuelaAlumnos {
             System.out.println(sc.notaFinal(aux));
         }
         
+        System.out.println("-------------------------");
+        
+        sc.buscarAlumne("A1");
+        
         
         
 

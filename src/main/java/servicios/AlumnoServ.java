@@ -49,7 +49,7 @@ public class AlumnoServ {
     public Alumno crearAlumno() {
         Alumno x = new Alumno();
         System.out.println("Nombre");
-        x.setNombre("Andrey" + ((int) (Math.random() * 1000)+1));
+        x.setNombre("A" + ((int) (Math.random() * 10)+1));
 
         ArrayList<Integer> ww = new ArrayList<>();
 
@@ -71,8 +71,25 @@ public class AlumnoServ {
         }
         
         ntFnl = num1/ww.size(); 
+        System.out.println("Alumno "+xxx.getNombre());
         return ntFnl;
     }
+   
+    
+    public void buscarAlumne(String nombreAlumno) {
+
+        for (int i = 0; i < alumnis.size(); i++) {
+            Alumno w = alumnis.get(i);
+            String m = alumnis.get(i).getNombre();
+            if (m.equalsIgnoreCase(nombreAlumno)) {
+//                notaFinal(w);
+                System.out.println("La nota final es "+notaFinal(w)+" Index "+(i+1));
+            }
+
+        }
+    }
+    
+    
 
     public void mostrarAlumno() {
         for (Alumno aux : alumnis) {
