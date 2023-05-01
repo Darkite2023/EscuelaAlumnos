@@ -17,4 +17,12 @@ public class PerroServ {
         return xx;
     }
     
+    public void mostrarPerro(Perro x){
+        
+        System.out.println(x.getRaza());
+    }
+    
+  
+    
+    
 }
