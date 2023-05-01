@@ -5,6 +5,8 @@
 package com.mycompany.escuelaalumnos;
 
 import entidades.Alumno;
+import java.util.ArrayList;
+import java.util.List;
 import servicios.AlumnoServ;
 
 /**
@@ -17,8 +19,19 @@ public class EscuelaAlumnos {
         System.out.println("Hello World!");
         AlumnoServ sc = new AlumnoServ();
         Alumno alum = new Alumno();
+        
+        List<Alumno> curso = sc.getAlumnis();
         sc.cargarAlumnos();
         sc.mostrarAlumno();
+        
+        System.out.println("-------------------------");
+        
+        for (Alumno aux : curso) {
+            System.out.println(sc.notaFinal(aux));
+        }
+        
+        
+        
 
     }
 }

@@ -49,9 +49,29 @@ public class AlumnoServ {
     public Alumno crearAlumno() {
         Alumno x = new Alumno();
         System.out.println("Nombre");
-        x.setNombre("Andrey" + ((int) (Math.random() * 10)));
+        x.setNombre("Andrey" + ((int) (Math.random() * 1000)+1));
+
+        ArrayList<Integer> ww = new ArrayList<>();
+
+        for (int i = 0; i < 3; i++) {
+            ww.add((int) ((Math.random() * 10) + 1));
+        }
+        x.setNotas(ww);
 
         return x;
+    }
+    public double notaFinal(Alumno xxx){
+        List<Integer> ww = new ArrayList<>();
+        ww = xxx.getNotas();
+        double num1=0;
+        double ntFnl;
+        
+        for (int i = 0; i < ww.size(); i++) {
+            num1=num1+ww.get(i);
+        }
+        
+        ntFnl = num1/ww.size(); 
+        return ntFnl;
     }
 
     public void mostrarAlumno() {
