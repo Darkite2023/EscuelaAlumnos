@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Scanner;
 import servicios.PerroServ;
 
@@ -21,6 +22,7 @@ public class ArrayListGuia9 {
         Scanner leer = new Scanner(System.in).useDelimiter("\n");
         PerroServ sc = new PerroServ();
         ArrayList<Perro> arPerro =new ArrayList<>();
+        List<Perro> arPerro2 =sc.getRazasPerros();
         arPerro.add(sc.crearPerro());
         for (int i = 0; i < 4; i++) {
             arPerro.add(sc.crearPerro());
@@ -114,6 +116,13 @@ public class ArrayListGuia9 {
         Collections.sort(arPerro, Comparadores.ordenarRazaAsc);
         for (Perro aux : arPerro) {
             System.out.println(aux+"Test");
+        }
+        System.out.println("--------------");
+        
+        sc.fabricarPerro(4);
+        Collections.sort(arPerro2, Comparadores.ordenarRazaAsc);
+         for (Perro aux : arPerro2) {
+            System.out.println(aux+"Test2");
         }
 
         
