@@ -1,9 +1,11 @@
 
 package com.mycompany.arraylistguia9;
 
+import PerroUtilidades.Comparadores;
 import entidades.Perro;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.Scanner;
 import servicios.PerroServ;
@@ -29,7 +31,7 @@ public class ArrayListGuia9 {
         
        
 //        ArrayList<String> prueba5 = new ArrayList<>();
-//        Iterator<String> it = prueba5.iterator();
+        Iterator<Perro> it = arPerro.iterator();
 //
 //        for (String aux : prueba) {
 //            System.out.println(aux);
@@ -67,8 +69,8 @@ public class ArrayListGuia9 {
 
 
         
-        sc.fabricarPerro(10);
-        sc.mostrarPerro();
+//        sc.fabricarPerro(10);
+//        sc.mostrarPerro();
 //        System.out.println("--------------");
 //        sc.eliminarPerro(0);
 //        sc.mostrarPerro();
@@ -87,11 +89,32 @@ public class ArrayListGuia9 {
 //        sc.mostrarPerro();
         
       
-        
+        System.out.println("--------------");
         for (Perro aux : arPerro) {
-            System.out.println(aux+"VErga");
+            System.out.println(aux+"Test");
         }
+//        System.out.println("--------------");
+//        Collections.sort(arPerro, Comparadores.ordenarRazaDesc);
+//        for (Perro aux : arPerro) {
+//            System.out.println(aux+"Test");
+//        }
+        System.out.println("Buscar?");
+        String var = leer.next();
         
+        while (it.hasNext()) {
+            Perro next = it.next();
+            if (next.getRaza().equalsIgnoreCase(var)) {
+                it.remove();
+                System.out.println("Se removio el perro pedorro");
+            }
+            
+        }
+
+        System.out.println("--------------");
+        Collections.sort(arPerro, Comparadores.ordenarRazaAsc);
+        for (Perro aux : arPerro) {
+            System.out.println(aux+"Test");
+        }
 
         
     }
