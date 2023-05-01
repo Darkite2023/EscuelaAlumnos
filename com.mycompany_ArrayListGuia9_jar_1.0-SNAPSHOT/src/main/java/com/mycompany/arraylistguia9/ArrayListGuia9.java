@@ -1,11 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
 
 package com.mycompany.arraylistguia9;
 
 import entidades.Perro;
 import java.util.ArrayList;
+import java.util.Scanner;
+import servicios.PerroServ;
 
 /**
  *
@@ -15,25 +14,34 @@ public class ArrayListGuia9 {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
-        
-        
+        Scanner leer = new Scanner(System.in).useDelimiter("\n");
+        PerroServ sc = new PerroServ();
         ArrayList<Perro> prueba = new ArrayList<>();
+        boolean bol1 = false;
+        int num1;
+        System.out.println(bol1);
+        int x = 0;
+        do {
+            prueba.add(sc.crearPerro());
+            System.out.println("Desea continuar? 1 para salir");
+            
+            num1 = leer.nextInt();
+            if (num1==1) {
+                
+                bol1=true;
+
+            }
+
+        } while (bol1==false);
         
-        Perro dog1 = new Perro("corky");
-        Perro dog2 = new Perro("corky2");
-        Perro dog3 = new Perro("corky3");
-        Perro dog4 = new Perro("corky4");
+        for (Perro iter : prueba) {
+            sc.mostrarPerro(iter);
+            
+           System.out.println(iter);
+            
+        }
         
         
-        prueba.add(dog1);
-        prueba.add(dog2);
-        prueba.add(dog3);
-        prueba.add(dog4);
         
-        System.out.println(prueba.get(0));
-        System.out.println(prueba.get(1));
-        System.out.println(prueba.get(2));
-        System.out.println(prueba.get(3));
-       
     }
 }
