@@ -4,6 +4,10 @@
 
 package com.mycompany.peliculasapp;
 
+import java.util.ArrayList;
+import java.util.List;
+import servicios.PeliculaServ;
+
 /**
  *
  * @author Polako
@@ -11,6 +15,13 @@ package com.mycompany.peliculasapp;
 public class PeliculasAPP {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        PeliculaServ sc = new PeliculaServ();
+        List<PeliculaServ> listaPelic = new ArrayList();
+        
+        sc.fabricarPelis(5);
+        sc.mostrarPeli2();
+        
+        
+        
     }
 }
