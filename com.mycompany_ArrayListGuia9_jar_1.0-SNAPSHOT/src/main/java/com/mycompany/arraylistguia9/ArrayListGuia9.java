@@ -3,6 +3,8 @@ package com.mycompany.arraylistguia9;
 
 import entidades.Perro;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.Scanner;
 import servicios.PerroServ;
 
@@ -13,52 +15,71 @@ import servicios.PerroServ;
 public class ArrayListGuia9 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+  
         Scanner leer = new Scanner(System.in).useDelimiter("\n");
         PerroServ sc = new PerroServ();
-        ArrayList<Perro> prueba = new ArrayList<>();
-        boolean bol1 = false;
-        int num1;
-        System.out.println(bol1);
-        int x = 0;
-//        do {
-//            prueba.add(sc.crearPerro(5));
-//            System.out.println("Desea continuar? 1 para salir");
-//            
-//            num1 = leer.nextInt();
-//            if (num1==1) {
-//                
-//                bol1=true;
+//        String[] pruba2 = {"Pepa", "pipa", "pupa"};
+//        String[] pruba4 = {"qepa", "qipa", "qupa"};
+//        ArrayList<String> prueba = new ArrayList<>(Arrays.asList(pruba2));
+//        ArrayList<String> prueba5 = new ArrayList<>();
+//        Iterator<String> it = prueba5.iterator();
+//
+//        for (String aux : prueba) {
+//            System.out.println(aux);
+//        }
+//        System.out.println("--------------");
+//        System.out.println(prueba.get(1));
+//        System.out.println("--------------");
+//        prueba5.addAll(prueba);
+//        prueba5.addAll(1, (Arrays.asList(pruba4)));
+//        for (String aux : prueba5) {
+//            System.out.println(aux);
+//        }
+//
+//        System.out.println("--------------");
+//
+//        for (int i = 0; i < prueba5.size(); i++) {
+//
+//            String m = prueba5.get(i);
+//            if (m.equalsIgnoreCase("pupa")) {
+//
+//                prueba5.remove(i);
 //
 //            }
 //
-//        } while (bol1==false);
+//        }
+//
+//        for (int i = 0; i < prueba5.size(); i++) {
+//
+//            String m = prueba5.get(i);
+//            System.out.println(m);
+//
+//        }
 
-        sc.fabricarPerro(5);
-        sc.mostrarPerro();
-        System.out.println("--------------");
-        sc.fabricarPerro(5);
+ 
+
+
+        
+        sc.fabricarPerro(10);
         sc.mostrarPerro();
         System.out.println("--------------");
         sc.eliminarPerro(0);
         sc.mostrarPerro();
         System.out.println("--------------");
-        Perro xxx = sc.crearPerro();
-        sc.agregarPerro(0, xxx);
+        
+        sc.agregarPerro2(1);
         sc.mostrarPerro();
-         
-         
+        System.out.println("--------------");
+        System.out.println("Ingrese la raza que desea buscar y eliminar");
+        sc.buscarElimanar2(leer.next());
+          
+         sc.mostrarPerro();
         
+        System.out.println("--------------");
+        sc.actualizarRaza("dog1", "Polako");
+        sc.mostrarPerro();
 
-        
-//        for (Perro iter : prueba) {
-//            sc.mostrarPerro(iter);
-//            
-//           System.out.println(iter);
-//            
-//        }
-//        
-        
+
         
     }
 }
