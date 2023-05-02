@@ -41,9 +41,9 @@ public class PeliculaServ {
     
      public Pelicula crearPeli() {
         Pelicula x = new Pelicula();
-        x.setNombrePelicula("Peli-" + ((int) (Math.random() * 10)+1));
-        x.setDirectorPelicula("Director-" + ((int) (Math.random() * 10)+1));
-        x.setDuracionPelicula(((int) (Math.random() * 10)+1));
+        x.setNombrePelicula("Peli-" + ((int) (Math.random() * 100)+1));
+        x.setDirectorPelicula("Director-" + ((int) (Math.random() * 100)+1));
+        x.setDuracionPelicula(((int) (Math.random() * 100)+1));
         return x;
     }
      
@@ -69,6 +69,18 @@ public class PeliculaServ {
          }
      }
     
+      public void mostrarPeliHora(int duracionMayor){
+         for (Pelicula aux : listaPelis) {
+             
+             if (duracionMayor<aux.getDuracionPelicula()) {
+             System.out.println("El nombre de la pelicula es: "+aux.getNombrePelicula()+" v1");
+             
+             System.out.println("La duracion de la pelicula es: "+aux.getDuracionPelicula()+" v1");
+             System.out.println("------------------------------------------------------------"); 
+             }
+             
+         }
+     }
     
     
 }
