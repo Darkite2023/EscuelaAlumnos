@@ -4,6 +4,8 @@
  */
 package entidades;
 
+import java.util.Objects;
+
 /**
  *
  * @author Polako
@@ -31,6 +33,28 @@ public class Pais {
     @Override
     public String toString() {
         return "Pais{" + "pais=" + pais + '}';
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 73 * hash + Objects.hashCode(this.pais);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Pais other = (Pais) obj;
+        return Objects.equals(this.pais, other.pais);
     }
     
 }

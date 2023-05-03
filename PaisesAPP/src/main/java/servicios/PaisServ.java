@@ -6,6 +6,7 @@ package servicios;
 
 import entidades.Pais;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
 
@@ -29,7 +30,7 @@ public class PaisServ {
     }
     
     public Pais cargarPais(){
-        Pais x =new Pais("Pais Bananero" + ((int) (Math.random() * 100)+1));
+        Pais x = new Pais("Pais Bananero" + ((int) (Math.random() * 10)+1));
         
         return x;
     }
@@ -44,6 +45,17 @@ public class PaisServ {
         } while (var1.equalsIgnoreCase("Si"));
     }
     
+    public void FabricarPaises2(int cantidad) {
+        
+
+       
+            for (int i = 0; i < cantidad; i++) {
+            listaPaises.add(cargarPais());
+        }
+           
+             
+       
+    }
     
     
 }
